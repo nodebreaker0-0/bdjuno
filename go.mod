@@ -24,6 +24,6 @@ replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alp
 
 replace google.golang.org/grpc => google.golang.org/grpc v1.33.2
 
-replace github.com/tendermint/tendermint => github.com/huichiaotsou/tendermint v1.0.0 // perso fork for customized tendermint
+replace github.com/tendermint/tendermint => github.com/huichiaotsou/tendermint v1.0.2 // perso fork for customized tendermint
 
-replace github.com/cosmos/cosmos-sdk => github.com/huichiaotsou/cosmos-sdk v1.0.2 // perso fork for customized sdk
+replace github.com/cosmos/cosmos-sdk => github.com/huichiaotsou/cosmos-sdk v1.0.4 // perso fork for customized sdk
