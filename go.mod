@@ -27,3 +27,5 @@ replace google.golang.org/grpc => google.golang.org/grpc v1.33.2
 replace github.com/tendermint/tendermint => github.com/huichiaotsou/tendermint v1.0.3 // perso fork for customized tendermint
 
 replace github.com/cosmos/cosmos-sdk => github.com/huichiaotsou/cosmos-sdk v1.0.5 // remove final stake / current stake panic
+
+replace github.com/forbole/juno/v2 => github.com/huichiaotsou/juno/v2 v2.0.0-20211227141501-82c7833f554c // use go routine
