@@ -14,6 +14,7 @@ func NewBlocksCmd(parseConfig *parse.Config) *cobra.Command {
 
 	cmd.AddCommand(
 		blocksCmd(parseConfig),
+		blockTimeCmd(parseConfig),
 	)
 
 	return cmd

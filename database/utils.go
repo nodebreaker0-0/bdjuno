@@ -2,6 +2,7 @@ package database
 
 import (
 	"fmt"
+	"time"
 )
 
 // InsertEnableModules allows to save enabled module into the database
@@ -34,5 +35,14 @@ func (db *Db) InsertEnableModules(modules []string) error {
 		return fmt.Errorf("error while storing modules: %s", err)
 	}
 
+	return nil
+}
+
+func (db *Db) UpdateBlockTime(height int64, timestamp time.Time) error {
+	stmt := "UPDATE block SET timestamp = $1 WHERE height = $2"
+	_, err := db.Sql.Exec(stmt, timestamp, height)
+	if err != nil {
+		return fmt.Errorf("error while updating block time: %s", err)
+	}
 	return nil
 }
