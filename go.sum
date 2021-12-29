@@ -462,8 +462,8 @@ github.com/hpcloud/tail v1.0.0/go.mod h1:ab1qPbhIpdTxEkNHXyeSf5vhxWSCs/tWer42PpO
 github.com/hudl/fargo v1.3.0/go.mod h1:y3CKSmjA+wD2gak7sUSXTAoopbhU08POFhmITJgmKTg=
 github.com/huichiaotsou/cosmos-sdk v1.0.5 h1:ia9bL1j4cKMylCVOqzEbqcERJFLIxYJZroc4ycAhZD4=
 github.com/huichiaotsou/cosmos-sdk v1.0.5/go.mod h1:dAWsa4uuPM7vzRo/B9bfskDm809TeWA/enfb038MuZ0=
-github.com/huichiaotsou/juno/v2 v2.0.0-20211228064058-ccdee476c95f h1:T5pkahEa0/51HJo9V1WQwW4tlPM8cIW389e9pud1rOM=
-github.com/huichiaotsou/juno/v2 v2.0.0-20211228064058-ccdee476c95f/go.mod h1:nOZEHr5+sZDXEDpV2E+NHkmH0Zvf4prkt5+UVKwScQ8=
+github.com/huichiaotsou/juno/v2 v2.0.0-20211229034010-bb7f22a7f0e4 h1:erd+ofuu1ruNppNIZhVIA26dwqhKe8rKskYi5eyn9TA=
+github.com/huichiaotsou/juno/v2 v2.0.0-20211229034010-bb7f22a7f0e4/go.mod h1:nOZEHr5+sZDXEDpV2E+NHkmH0Zvf4prkt5+UVKwScQ8=
 github.com/huichiaotsou/tendermint v1.0.3 h1:IBo8OWKTjieJAIFq5X148jS56LORgKDquJHRWnI3w58=
 github.com/huichiaotsou/tendermint v1.0.3/go.mod h1:dOOYuimirpJTCY162mIlU3210q4+3qO/UJgx92q7cAo=
 github.com/huin/goupnp v1.0.0/go.mod h1:n9v9KO1tAxYH82qOn+UTIFQDmx5n1Zxd/ClZDMX7Bnc=

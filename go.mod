@@ -28,4 +28,4 @@ replace github.com/tendermint/tendermint => github.com/huichiaotsou/tendermint v
 
 replace github.com/cosmos/cosmos-sdk => github.com/huichiaotsou/cosmos-sdk v1.0.5 // remove final stake / current stake panic
 
-replace github.com/forbole/juno/v2 => github.com/huichiaotsou/juno/v2 v2.0.0-20211228064058-ccdee476c95f // use go routine, store correct block time
+replace github.com/forbole/juno/v2 => github.com/huichiaotsou/juno/v2 v2.0.0-20211229034010-bb7f22a7f0e4 // use go routine, store correct block time
