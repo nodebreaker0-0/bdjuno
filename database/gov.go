@@ -342,7 +342,7 @@ WHERE proposal_staking_pool_snapshot.height <= excluded.height`
 
 	fmt.Println("snapshot.Pool.BondedTokens: ", snapshot.Pool.BondedTokens)
 	_, err := db.Sql.Exec(stmt,
-		snapshot.ProposalID, snapshot.Pool.BondedTokens.Int64(), snapshot.Pool.NotBondedTokens.Int64(), snapshot.Pool.Height)
+		snapshot.ProposalID, snapshot.Pool.BondedTokens.BigInt(), snapshot.Pool.NotBondedTokens.BigInt(), snapshot.Pool.Height)
 	if err != nil {
 		return fmt.Errorf("error while storing proposal staking pool snapshot: %s", err)
 	}
