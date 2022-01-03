@@ -5,7 +5,6 @@ import (
 
 	"github.com/forbole/bdjuno/v2/database"
 	"github.com/forbole/juno/v2/cmd/parse"
-	"github.com/forbole/juno/v2/types/config"
 	"github.com/spf13/cobra"
 )
 
@@ -14,7 +13,6 @@ func NewCountCmd(parseConfig *parse.Config) *cobra.Command {
 		Use:   "count-missing",
 		Short: "get missing blocks and counts",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			fmt.Println("node type: ", config.Cfg)
 			parseCtx, err := parse.GetParsingContext(parseConfig)
 			if err != nil {
 				return err

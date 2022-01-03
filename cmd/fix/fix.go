@@ -6,6 +6,7 @@ import (
 
 	fixauth "github.com/forbole/bdjuno/v2/cmd/fix/auth"
 	fixblocks "github.com/forbole/bdjuno/v2/cmd/fix/blocks"
+	fixcount "github.com/forbole/bdjuno/v2/cmd/fix/count"
 	fixgov "github.com/forbole/bdjuno/v2/cmd/fix/gov"
 	fixstaking "github.com/forbole/bdjuno/v2/cmd/fix/staking"
 )
@@ -23,6 +24,7 @@ func NewFixCmd(parseCfg *parse.Config) *cobra.Command {
 		fixblocks.NewBlocksCmd(parseCfg),
 		fixgov.NewGovCmd(parseCfg),
 		fixstaking.NewStakingCmd(parseCfg),
+		fixcount.NewCountCmd(parseCfg),
 	)
 
 	return cmd
