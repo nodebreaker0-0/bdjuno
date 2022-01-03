@@ -14,7 +14,7 @@ func NewCountCmd(parseConfig *parse.Config) *cobra.Command {
 		Use:   "count-missing",
 		Short: "get missing blocks and counts",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			fmt.Println("node type: ", config.Cfg.Node.Type)
+			fmt.Println("node type: ", config.Cfg)
 			parseCtx, err := parse.GetParsingContext(parseConfig)
 			if err != nil {
 				return err
