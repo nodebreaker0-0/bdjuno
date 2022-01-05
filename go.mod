@@ -28,6 +28,6 @@ replace github.com/tendermint/tendermint => github.com/huichiaotsou/tendermint v
 
 replace github.com/cosmos/cosmos-sdk => github.com/huichiaotsou/cosmos-sdk v1.0.5 // remove final stake / current stake panic
 
-// replace github.com/forbole/juno/v2 => github.com/huichiaotsou/juno/v2 v2.0.0-20211229050548-ceaf3de8e114 // add fix certain blocks cmd
+replace github.com/forbole/juno/v2 => github.com/huichiaotsou/juno/v2 v2.0.0-20211229050548-ceaf3de8e114 // add fix certain blocks cmd
 
-replace github.com/forbole/juno/v2 => github.com/huichiaotsou/juno/v2 v2.0.0-20211231074226-85621cdb1fb4 // add time log
+// replace github.com/forbole/juno/v2 => github.com/huichiaotsou/juno/v2 v2.0.0-20211231074226-85621cdb1fb4 // add time log
