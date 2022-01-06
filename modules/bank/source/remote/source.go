@@ -43,6 +43,8 @@ func (s Source) GetBalances(addresses []string, height int64) ([]types.AccountBa
 			return nil, fmt.Errorf("error while getting all balances: %s", err)
 		}
 
+		fmt.Println("balRes: ", balRes)
+
 		balances = append(balances, types.NewAccountBalance(
 			address,
 			balRes.Balances,
