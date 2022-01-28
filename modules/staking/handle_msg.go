@@ -22,14 +22,14 @@ func (m *Module) HandleMsg(index int, msg sdk.Msg, tx *juno.Tx) error {
 	case *stakingtypes.MsgEditValidator:
 		return m.handleEditValidator(tx.Height, cosmosMsg)
 
-	case *stakingtypes.MsgDelegate:
-		return m.storeDelegationFromMessage(tx.Height, cosmosMsg)
+		// case *stakingtypes.MsgDelegate:
+		// 	return m.storeDelegationFromMessage(tx.Height, cosmosMsg)
 
-	case *stakingtypes.MsgBeginRedelegate:
-		return m.handleMsgBeginRedelegate(tx, index, cosmosMsg)
+		// case *stakingtypes.MsgBeginRedelegate:
+		// 	return m.handleMsgBeginRedelegate(tx, index, cosmosMsg)
 
-	case *stakingtypes.MsgUndelegate:
-		return m.handleMsgUndelegate(tx, index, cosmosMsg)
+		// case *stakingtypes.MsgUndelegate:
+		// 	return m.handleMsgUndelegate(tx, index, cosmosMsg)
 	}
 
 	return nil

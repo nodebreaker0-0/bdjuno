@@ -40,7 +40,7 @@ func (m *Module) HandleBlock(
 	go m.updateStakingPool(block.Block.Height)
 
 	// Update redelegations and unbonding delegations
-	go m.updateElapsedDelegations(block.Block.Height, block.Block.Time, res.EndBlockEvents)
+	// go m.updateElapsedDelegations(block.Block.Height, block.Block.Time, res.EndBlockEvents)
 
 	return nil
 }
