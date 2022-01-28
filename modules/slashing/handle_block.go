@@ -3,11 +3,9 @@ package slashing
 import (
 	"fmt"
 
-	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	juno "github.com/forbole/juno/v2/types"
 
 	"github.com/rs/zerolog/log"
-	abci "github.com/tendermint/tendermint/abci/types"
 	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
 )
 
@@ -21,11 +19,11 @@ func (m *Module) HandleBlock(
 		return fmt.Errorf("error while updating signing info: %s", err)
 	}
 
-	// Update the delegations of the slashed validators
-	err = m.updateSlashedDelegations(block.Block.Height, results.BeginBlockEvents)
-	if err != nil {
-		return fmt.Errorf("error while updating slashes: %s", err)
-	}
+	// // Update the delegations of the slashed validators
+	// err = m.updateSlashedDelegations(block.Block.Height, results.BeginBlockEvents)
+	// if err != nil {
+	// 	return fmt.Errorf("error while updating slashes: %s", err)
+	// }
 
 	return nil
 }
@@ -42,27 +40,27 @@ func (m *Module) updateSigningInfo(height int64) error {
 	return m.db.SaveValidatorsSigningInfos(signingInfos)
 }
 
-// updateSlashedDelegations updates all the delegations of the slashed validators
-func (m *Module) updateSlashedDelegations(height int64, beginBlockEvents []abci.Event) error {
-	events := juno.FindEventsByType(beginBlockEvents, slashingtypes.EventTypeSlash)
+// // updateSlashedDelegations updates all the delegations of the slashed validators
+// func (m *Module) updateSlashedDelegations(height int64, beginBlockEvents []abci.Event) error {
+// 	events := juno.FindEventsByType(beginBlockEvents, slashingtypes.EventTypeSlash)
 
-	for _, event := range events {
-		addressAttr, err := juno.FindAttributeByKey(event, slashingtypes.AttributeKeyAddress)
-		if err != nil {
-			return err
-		}
+// 	for _, event := range events {
+// 		addressAttr, err := juno.FindAttributeByKey(event, slashingtypes.AttributeKeyAddress)
+// 		if err != nil {
+// 			return err
+// 		}
 
-		consAddr := string(addressAttr.Value)
-		valOperAddr, err := m.db.GetValidatorOperatorAddress(consAddr)
-		if err != nil {
-			return fmt.Errorf("error while getting validator operator address; make sure the slashing module is listed after the staking module: %s", err)
-		}
+// 		consAddr := string(addressAttr.Value)
+// 		valOperAddr, err := m.db.GetValidatorOperatorAddress(consAddr)
+// 		if err != nil {
+// 			return fmt.Errorf("error while getting validator operator address; make sure the slashing module is listed after the staking module: %s", err)
+// 		}
 
-		err = m.stakingModule.RefreshValidatorDelegations(height, valOperAddr.String())
-		if err != nil {
-			return fmt.Errorf("error while refreshing validator delegations for validator %s: %s", consAddr, err)
-		}
-	}
+// 		err = m.stakingModule.RefreshValidatorDelegations(height, valOperAddr.String())
+// 		if err != nil {
+// 			return fmt.Errorf("error while refreshing validator delegations for validator %s: %s", consAddr, err)
+// 		}
+// 	}
 
-	return nil
-}
+// 	return nil
+// }

@@ -45,13 +45,14 @@ func (m *Module) handleMsgCreateValidator(height int64, msg *stakingtypes.MsgCre
 		return fmt.Errorf("error while refreshing validator from MsgCreateValidator: %s", err)
 	}
 
-	// Get the first self delegation
-	delegations, err := m.getValidatorDelegations(height, msg.ValidatorAddress)
-	if err != nil {
-		return nil
-	}
+	// // Get the first self delegation
+	// delegations, err := m.getValidatorDelegations(height, msg.ValidatorAddress)
+	// if err != nil {
+	// 	return nil
+	// }
 
-	return m.db.SaveDelegations(delegations)
+	// return m.db.SaveDelegations(delegations)
+	return nil
 }
 
 // handleEditValidator handles MsgEditValidator utils, updating the validator info and commission
@@ -64,26 +65,26 @@ func (m *Module) handleEditValidator(height int64, msg *stakingtypes.MsgEditVali
 	return nil
 }
 
-// ---------------------------------------------------------------------------------------------------------------------
+// // ---------------------------------------------------------------------------------------------------------------------
 
-// handleMsgBeginRedelegate handles a MsgBeginRedelegate storing the data inside the database
-func (m *Module) handleMsgBeginRedelegate(tx *juno.Tx, index int, msg *stakingtypes.MsgBeginRedelegate) error {
-	_, err := m.storeRedelegationFromMessage(tx, index, msg)
-	if err != nil {
-		return fmt.Errorf("error while storing redelegation from message: %s", err)
-	}
+// // handleMsgBeginRedelegate handles a MsgBeginRedelegate storing the data inside the database
+// func (m *Module) handleMsgBeginRedelegate(tx *juno.Tx, index int, msg *stakingtypes.MsgBeginRedelegate) error {
+// 	_, err := m.storeRedelegationFromMessage(tx, index, msg)
+// 	if err != nil {
+// 		return fmt.Errorf("error while storing redelegation from message: %s", err)
+// 	}
 
-	// Update the current delegations
-	return m.refreshDelegatorDelegations(tx.Height, msg.DelegatorAddress)
-}
+// 	// Update the current delegations
+// 	return m.refreshDelegatorDelegations(tx.Height, msg.DelegatorAddress)
+// }
 
-// handleMsgUndelegate handles a MsgUndelegate storing the data inside the database
-func (m *Module) handleMsgUndelegate(tx *juno.Tx, index int, msg *stakingtypes.MsgUndelegate) error {
-	_, err := m.storeUnbondingDelegationFromMessage(tx, index, msg)
-	if err != nil {
-		return fmt.Errorf("error while storing unbonding delegation from message: %s", err)
-	}
+// // handleMsgUndelegate handles a MsgUndelegate storing the data inside the database
+// func (m *Module) handleMsgUndelegate(tx *juno.Tx, index int, msg *stakingtypes.MsgUndelegate) error {
+// 	_, err := m.storeUnbondingDelegationFromMessage(tx, index, msg)
+// 	if err != nil {
+// 		return fmt.Errorf("error while storing unbonding delegation from message: %s", err)
+// 	}
 
-	// Update the current delegations
-	return m.refreshDelegatorDelegations(tx.Height, msg.DelegatorAddress)
-}
+// 	// Update the current delegations
+// 	return m.refreshDelegatorDelegations(tx.Height, msg.DelegatorAddress)
+// }

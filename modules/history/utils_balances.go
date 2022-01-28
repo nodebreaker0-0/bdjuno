@@ -7,15 +7,15 @@ import (
 	"github.com/forbole/bdjuno/v2/types"
 )
 
-// UpdateAccountBalanceHistory updates the historic balance for the user having the given address
-func (m *Module) UpdateAccountBalanceHistory(address string) error {
-	block, err := m.db.GetLastBlock()
-	if err != nil {
-		return fmt.Errorf("error while getting last block: %s", err)
-	}
+// // UpdateAccountBalanceHistory updates the historic balance for the user having the given address
+// func (m *Module) UpdateAccountBalanceHistory(address string) error {
+// 	block, err := m.db.GetLastBlock()
+// 	if err != nil {
+// 		return fmt.Errorf("error while getting last block: %s", err)
+// 	}
 
-	return m.UpdateAccountBalanceHistoryWithTime(address, block.Timestamp)
-}
+// 	return m.UpdateAccountBalanceHistoryWithTime(address, block.Timestamp)
+// }
 
 // UpdateAccountBalanceHistoryWithTime updates the historic balance for the user having the given address storing it
 // associated to the given time
