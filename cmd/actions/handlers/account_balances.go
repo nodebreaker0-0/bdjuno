@@ -45,6 +45,7 @@ func getAccountBalance(input actionstypes.AccountBalanceArgs) (response actionst
 	}
 
 	height := input.Height
+
 	fmt.Println(height)
 
 	if height == 0 {
