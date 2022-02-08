@@ -13,7 +13,9 @@ import (
 
 	"github.com/forbole/bdjuno/v2/types/config"
 
+	gaiaapp "github.com/cosmos/gaia/v6/app"
 	squaapp "github.com/cosmosquad-labs/squad/app"
+
 	"github.com/forbole/bdjuno/v2/database"
 	"github.com/forbole/bdjuno/v2/modules"
 )
@@ -51,6 +53,7 @@ func main() {
 // This should be edited by custom implementations if needed.
 func getBasicManagers() []module.BasicManager {
 	return []module.BasicManager{
+		gaiaapp.ModuleBasics,
 		squaapp.ModuleBasics,
 	}
 }

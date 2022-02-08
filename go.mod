@@ -4,12 +4,12 @@ go 1.16
 
 require (
 	github.com/cosmos/cosmos-sdk v0.44.5
+	github.com/cosmos/gaia/v6 v6.0.0
 	github.com/cosmos/ibc-go v1.2.0
 	github.com/cosmosquad-labs/squad v0.0.6-alpha
 	github.com/forbole/juno/v2 v2.0.0-20220126170316-a7d4812d6af2
 	github.com/go-co-op/gocron v1.11.0
 	github.com/gogo/protobuf v1.3.3
-	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/jmoiron/sqlx v1.2.1-0.20200324155115-ee514944af4b
 	github.com/lib/pq v1.10.4
 	github.com/pelletier/go-toml v1.9.4
@@ -24,7 +24,7 @@ require (
 
 replace google.golang.org/grpc => google.golang.org/grpc v1.33.2
 
-replace github.com/cosmos/cosmos-sdk => github.com/crescent-network/cosmos-sdk v0.44.5-enhanced-rc2
+replace github.com/cosmos/cosmos-sdk => github.com/cosmosquad-labs/cosmos-sdk v0.44.5-enhanced-rc2
 
 replace github.com/cosmosquad-labs/squad => /root/squad
 
