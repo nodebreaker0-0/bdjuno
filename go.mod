@@ -7,7 +7,7 @@ require (
 	github.com/cosmos/gaia/v6 v6.0.0
 	github.com/cosmos/ibc-go/v2 v2.0.2
 	github.com/cosmosquad-labs/squad v0.0.6-alpha
-	github.com/forbole/juno/v2 v2.0.0-20220125161451-4f6319e432a5
+	github.com/forbole/juno/v2 v2.0.0-20220131163637-af72e7ad8057
 	github.com/go-co-op/gocron v1.11.0
 	github.com/gogo/protobuf v1.3.3
 	github.com/jmoiron/sqlx v1.2.1-0.20200324155115-ee514944af4b
