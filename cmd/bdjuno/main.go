@@ -13,10 +13,9 @@ import (
 
 	"github.com/forbole/bdjuno/v2/types/config"
 
+	squaapp "github.com/cosmosquad-labs/squad/app"
 	"github.com/forbole/bdjuno/v2/database"
 	"github.com/forbole/bdjuno/v2/modules"
-
-	squaapp "github.com/cosmosquad-labs/squad/app"
 )
 
 func main() {
