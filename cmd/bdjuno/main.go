@@ -15,7 +15,6 @@ import (
 
 	gaiaapp "github.com/cosmos/gaia/v6/app"
 	squaapp "github.com/cosmosquad-labs/squad/app"
-
 	"github.com/forbole/bdjuno/v2/database"
 	"github.com/forbole/bdjuno/v2/modules"
 )
